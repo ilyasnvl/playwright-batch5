@@ -9,4 +9,8 @@ test('Add item', async ({ page }) => {
     const btnAtc = page.locator('#add-to-cart-sauce-labs-backpack');
     await btnAtc.click();
 
+    //verify text di button berubah setelah atc
+    const btnRemove = page.locator('#remove-sauce-labs-backpack');
+    await expect(btnRemove).toHaveText('Remove');
+
 });
