@@ -5,4 +5,5 @@ export default class checkoutLocators {
     postalCode = '#postal-code';
     btnSubmit = '#continue';
     btnFinish = '#finish';
+    successText = '#checkout_complete_container > h2';
 }

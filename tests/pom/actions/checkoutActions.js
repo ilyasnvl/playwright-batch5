@@ -15,6 +15,7 @@ export default class checkoutActions {
         this.postalCode = page.locator(this.checkoutLocators.postalCode);
         this.btnSubmit = page.locator(this.checkoutLocators.btnSubmit);
         this.btnFinish = page.locator(this.checkoutLocators.btnFinish);
+        this.successText = page.locator(this.checkoutLocators.successText);
     };
 
     async checkoutItem() {
@@ -27,8 +28,8 @@ export default class checkoutActions {
         await expect(this.postalCode).toHaveValue('88990');
         await this.btnSubmit.click();
         await this.btnFinish.click();
-        await expect(page).toHaveURL('https://www.saucedemo.com/checkout-complete.html');
-        await expect(page.getByText('Thank you for your orders!')).toBeVisible();
+        await expect(this.page).toHaveURL('https://www.saucedemo.com/checkout-complete.html');
+        await expect(this.successText).toHaveText('Thank you for your order!');
     }
 
 }

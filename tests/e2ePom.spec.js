@@ -11,8 +11,8 @@ test('E2E POM login to checkout', async ({ page }) => {
     const clickBtnObj = new atcActions(page);
     await clickBtnObj.clickBtn();
 
-    const CheckoutObj = new checkoutActions(page);
-    await CheckoutObj.checkoutItem();
+    const checkoutObj = new checkoutActions(page);
+    await checkoutObj.checkoutItem();
 });
 
 
