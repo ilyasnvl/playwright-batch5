@@ -30,6 +30,5 @@ export default class checkoutActions {
         await this.btnFinish.click();
         await expect(this.page).toHaveURL('https://www.saucedemo.com/checkout-complete.html');
         await expect(this.successText).toHaveText('Thank you for your order!');
-    }
-
+    };
 }
